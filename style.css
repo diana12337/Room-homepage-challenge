@@ -1,0 +1,310 @@
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.container-header {
+  position: relative;
+
+}
+
+.main-nav {
+  display: none;
+
+}
+
+ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  top:30px;
+  color: white;
+}
+
+.container { 
+display: grid; 
+
+}
+
+.button-arrow{
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: -30px;
+
+}
+.button {
+  background: black;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+ 
+.main-header {
+  display: flex;
+  justify-content: center;
+  
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+}
+.background {
+  background: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 20px; 
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 10px;
+  background: transparent;
+  border: none;
+}
+.hide-logo {
+  display: none;
+}
+.hamburger-menu {
+  width: 15px;
+  height: 2px;
+  background: white;  
+}
+.hamburger-background {
+  background: grey;
+}
+.up-div{
+  transform: translateY(5px) rotate(45deg);
+}
+
+.hide {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  color: black;
+  width: 100%;
+  padding: 30px 10px;
+}
+
+
+.center-div {
+  transform: rotate(-45deg);
+}
+
+.bottom-div {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.text {
+  color: hsl(0, 0%, 63%);
+  font-size: 14px;
+}
+.first {
+
+  background-image: url("images/icon-angle-left.svg");
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.first:hover {
+ background: hsl(0, 0%, 27%);
+ background-image: url("images/icon-angle-left.svg");
+ background-size: 20%;
+ background-repeat: no-repeat;
+ background-position: center;
+  }
+
+.second {
+
+  background-image: url("images/icon-angle-right.svg");
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.second:hover {
+ background: hsl(0, 0%, 27%);
+ background-image: url("images/icon-angle-right.svg");
+ background-size: 20%;
+ background-repeat: no-repeat;
+ background-position: center;
+  }
+
+.nav {
+  padding: 30px;
+  position: relative;
+}
+
+.header-text {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+
+.link {
+  margin-top: 15px;
+  letter-spacing: 12px;
+  background: transparent; 
+  border: none;
+}
+
+
+.link:after {
+  content: url("images/icon-arrow.svg");
+  padding-left: 15px;
+
+}
+
+
+.link:hover {
+  opacity: 0.5;
+}
+
+
+.about {
+  display: grid;
+  place-content: center;
+ padding: 30px;
+ 
+}
+
+.about-title {
+  font-size: 16px;
+}
+@media (min-width: 800px){
+
+ img {
+  object-fit: cover;
+  width: 100%;
+  height:100%;
+  }
+.container{
+  grid-template-columns: 29.5% 29.5% auto 29.5%;
+  grid-template-rows: 2fr 1fr;
+  }
+.header {
+   background: grey;
+  }
+
+body {
+ display: grid;
+  place-content: center;
+}
+.button-arrow {
+  right: auto;
+  left: 0;
+  top: auto;
+  bottom: 0;
+    }
+.button {
+  width: 80px;
+  height: 80px;
+}
+.container-header {
+  grid-column: 1 / 3;
+  }
+.nav {
+  grid-column: 3 / 5;
+  padding: 6rem 5rem;
+}
+  
+.about-title {
+  font-size: 18px;
+}
+.header-text {
+  font-size: 40px;
+  }
+
+.text {
+  font-size: 16px;
+  }
+
+ul li a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+ul li a::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  display: none;
+  background-color: white;
+  bottom: -10px;
+  left: 9px;
+}
+
+ul li a:hover::after {
+  display: block;
+}
+.about {
+  grid-column: 2 / 4;
+}
+
+ 
+.menu{
+  display: none;
+  }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  cursor: pointer;
+ }
+.logo {
+  top:53px;
+  left: 35px; 
+}
+  
+}
